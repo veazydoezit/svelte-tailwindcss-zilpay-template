@@ -39,8 +39,8 @@ export default {
 	},
 	plugins: [
 		svelte({
+			preprocess: sveltePreprocess({ postcss: true }),
 			compilerOptions: {
-				preprocess: sveltePreprocess({ postcss: true }),
 				// enable run-time checks when not in production
 				dev: !production
 			}

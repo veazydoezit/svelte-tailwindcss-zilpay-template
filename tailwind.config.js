@@ -1,22 +1,21 @@
 module.exports = {
-    purge: {
-        mode: 'all',
-        content: ['./**/**/*.html', './**/**/*.svelte'],
+  purge: {
+    enabled: !process.env.ROLLUP_WATCH,
+    mode: 'all',
+    content: ['./**/**/*.html', './**/**/*.svelte'],
 
-        options: {
-            whitelistPatterns: [/svelte-/],
-            defaultExtractor: (content) =>
-                [...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
-        },
+    options: {
+      whitelistPatterns: [/svelte-/],
+      defaultExtractor: (content) =>
+        [...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group),
     },
-
-    theme: {
-        extend: {},
-    },
-    variants: {},
-    plugins: [],
-    future: {
-        // purgeLayersByDefault: true,
-        // removeDeprecatedGapUtilities: true,
-    },
-};
+  },
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
