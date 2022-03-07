@@ -2,9 +2,11 @@
 
 ---
 
-# svelte-tailwindcss-template
+# svelte-tailwindcss-zilpay-template
 
 This is a fork of Svelte's project template to enable usage of Tailwindcss. Refer to https://github.com/sveltejs/template for more info.
+
+This is again forked to show how to use [Zilpay.js](https://zilpay.io/) using both Svelte and Tailwind.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
@@ -102,3 +104,11 @@ Then, from within your project folder:
 npm run build
 surge public my-project.surge.sh
 ```
+
+## Zilpay Documentation 
+
+https://zilpay.github.io/zilpay-docs/getting-started/
+
+## Other References 
+
+https://github.com/search?q=window.zilpay&type=code
